@@ -10308,5 +10308,11 @@ padding:0;
   font-family: 'Ravi Prakash', cursive;
 }
 
-
+.gameFrame{
+  width: 640;
+  height: 400;
+  border: none;
+  width:100%;
+  height:100%;
+}
 
