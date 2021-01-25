@@ -91,14 +91,14 @@ h1, h2, h3, h4, h5, h6 {
   filter: drop-shadow(3px 3px 1px rgba(0, 0, 0, 0.25));
   text-transform:uppercase;
 
-} 
+}
 .text-h2{
   color: white;
   font-size: 2rem;
   margin: 0;
   text-align: center;
   font-weight: lighter;
-} 
+}
 .text-general{
   color: white;
   font-size: 1rem;
@@ -6005,7 +6005,7 @@ a.close.disabled {
 
   color: #fff;
   text-align: left;
-  
+
 }
 
 .carousel-caption h3{
@@ -7475,13 +7475,25 @@ button.bg-dark:focus {
 .shadow-none {
   box-shadow: none !important;
 }
-
+.w-10 {
+  width: 10% !important;
+}
 .w-25 {
   width: 25% !important;
 }
+.w-33{
+  width:33.333333333% !important;
+}
 
+.w-40
+{
+  width: 40% !important;
+}
 .w-50 {
   width: 50% !important;
+}
+.w-60 {
+  width: 60% !important;
 }
 
 .w-75 {
@@ -10200,7 +10212,7 @@ p.lead {
   /* top: 0; */
   width: 100%;
   height: 100%;
-  
+
   color: #fff;
 }
 
@@ -10222,7 +10234,7 @@ p.lead {
   top: 0;
   left: 0;
   opacity: 0;
-  
+
 }
 .grid-text:hover{
   opacity: 1;
@@ -10273,60 +10285,23 @@ section.resume-section .resume-section-content {
   height: 400;
   border: none;
 }
-.gameImg{
-  display: inline-block;
+
+.figure-toast{
+  position: relative;
 }
-.gameImg img{
-  height: 20rem;
+.figure-toast span{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
 }
-.gameImg-9{
-  display: inline-block;
+.figure-toast span:hover{
+  opacity: 1;
+  cursor: pointer;
 }
-.gameImg-9 img{
-  width: 9rem;
-}
-.gameImg-12{
-  display: inline-block;
-}
-.gameImg-12 img{
-  height: 11.2rem;
-}
-.gameImg-15{
-  display: inline-block;
-}
-.gameImg-15 img{
-  height: 15rem;
-}
-.gameImg-18{
-  display: inline-block;
-}
-.gameImg-18 img{
-  height: 18.5rem;
-}
-.gameImg-27{
-  display: inline-block;
-}
-.gameImg-27 img{
-  height: 27.3rem;
-}
-.gameImg-30{
-  display: inline-block;
-}
-.gameImg-30 img{
-  height: 30.4rem;
-}
-.gameImg-35{
-  display: inline-block;
-}
-.gameImg-35 img{
-  height: 35rem;
-}
-.gameImg-inrow{
-  display:block;
-}
-.gameImg-inrow img{
-  width: 45.4rem;
-}
+
 .text-float h3{
   color: white;
   position: absolute;
@@ -10337,7 +10312,7 @@ section.resume-section .resume-section-content {
   -moz-box-pack: left top;
   -webkit-box-pack: left top;
   width: 100%;
-  height: 100%; 
+  height: 100%;
   top: 2rem;
   left: 4rem;
   opacity: 1;
