@@ -7489,6 +7489,10 @@ button.bg-dark:focus {
 {
   width: 40% !important;
 }
+.w-45
+{
+  width: 45% !important;
+}
 .w-50 {
   width: 50% !important;
 }
@@ -10302,7 +10306,7 @@ section.resume-section .resume-section-content {
   cursor: pointer;
 }
 
-.text-float h3{
+.text-float h3,p{
   color: white;
   position: absolute;
   display: -moz-box;
@@ -10317,7 +10321,10 @@ section.resume-section .resume-section-content {
   left: 4rem;
   opacity: 1;
 }
-
+.text-float p{
+  top: 4rem;
+  opacity: 0.5;
+}
 .clear-padding{
   padding:0;
   }
