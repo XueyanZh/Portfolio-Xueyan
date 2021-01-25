@@ -10306,7 +10306,7 @@ section.resume-section .resume-section-content {
   cursor: pointer;
 }
 
-.text-float h3,p{
+.text-float h3,.text-float p{
   color: white;
   position: absolute;
   display: -moz-box;
