@@ -10283,7 +10283,9 @@ section.resume-section .resume-section-content {
 .font-special{
   font-family: 'Ravi Prakash', cursive;
 }
-
+.font-remove{
+  font-family: '';
+}
 .gameFrame{
   width: 640;
   height: 400;
