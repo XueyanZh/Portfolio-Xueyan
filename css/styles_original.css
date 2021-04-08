@@ -10376,3 +10376,6 @@ section.resume-section .resume-section-content {
     display: block;
     color: #6c757d;
 }
+.floating-microgame-menu {
+  margin-left: 800px;
+}
