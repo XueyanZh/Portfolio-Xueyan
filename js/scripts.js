@@ -35,6 +35,9 @@
             $(".navbar-collapse").collapse("hide");
         });
 
+        // $('.carousel').carousel({interval:false});
+        
+
     // Activate scrollspy to add active class to navbar items on scroll
     $("body").scrollspy({
         target: "#sideNav",

@@ -13,6 +13,7 @@
         <!-- <script src="./js/all.js"></script> -->
         <!-- Google fonts-->
 
+        
         <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
       
@@ -22,9 +23,25 @@
         <link href="css/styles_original.css" rel="stylesheet" />
         <style>
             /* Make the image fully responsive */
-            .carousel-inner img {
-                width: 100%;
-                height: 100%;
+            /* .carousel-inner img {
+                height: 100;
+                width: 100;
+            } */
+            .card-modified{
+                position: relative;
+                display: flex;
+                /* flex-direction: column; */
+                height: 450px;
+                width: auto;
+                /* word-wrap: break-word; */
+                margin-bottom: 0;
+                padding-bottom: 0;
+                padding-top: 2rem;
+                
+                /* background-color: #fff;
+                background-clip: border-box;
+                border: 1px solid rgba(0, 0, 0, 0.125);
+                border-radius: 0.25rem; */
             }
             </style>
     </head>
@@ -38,78 +55,82 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-3">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolios">My Works</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#edu&exp">Education & Experience</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#aboutme">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolios-1">Tech Art Works</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolios-2">Micro Games</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#aboutme">Education & Experience</a></li>
                 </ul>
             </div>
         </nav>
         <!-- Page Content-->
         <div>
              <!-- portfolio-->
-            <section class="resume-section" id="portfolios">
+            <section class="resume-section" id="portfolios-1">
                 <div class="resume-section-content-special" >
-                    <h2 class="mb-5">Portfolio</h2>
-                    <div class="">
-                        <h3>Tech-Art Works</h3>
-                    </div>
-                    <div class="listGrid">
-                        
-                        <div id="demo" class="grid-pick carousel slide dropshodow-h" data-ride="carousel">
-                           
+                    <h2 class="mb-5">Tech-Art Works</h2>
+                        <div id="caro" class="grid-pick carousel slide " >
                             <!-- 指示符 -->
-                            <ul class="carousel-indicators">
-                                <li data-target="#demo" data-slide-to="0" class="active"></li>
-                                <li data-target="#demo" data-slide-to="1"></li>
-                                <li data-target="#demo" data-slide-to="2"></li>
+                            <ul class="carousel-indicators mt-2">
+                                <li data-target="#caro" data-slide-to="0" class="active"></li>
+                                <li data-target="#caro" data-slide-to="1"></li>
+                                <li data-target="#caro" data-slide-to="2"></li>
                             </ul>
                             <!-- 轮播图片 -->
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <a href="./gamepage-3.html"><img src="./assets/img/webq/capstone.webp">
-                                    <div class="carousel-caption">
-                                        <h3 class="font-special">[Updating]Capstone - Blog</h3>
-                                    </div>
-                                    </a>
+                                    <h3 class="font-special carousel-caption">Nature Scene Reel</h3>
+                                    <a href="./gamepage-3.html"><img src="./assets/img/webq/capstone.webp"></a>
+                                    <span class="card-modified" >
+                                        <ul class="list-unstyled">
+                                            <li class="subheading">Individual Work</li>
+                                            <br>
+                                            <li><h4 class="font-special font-remove">[Updating]Capstone - Blog</h4></li>
+                                            <li>In this project I will create some tools through Houdini or Substances, then Artists can use them to create game nature scene assets quickly.</li>
+                                        </ul>
+                                    </span>
+                                </div> 
+                                <div class="carousel-item">
+                                   <h3 class="font-special carousel-caption">VR Puzzle</h3>
+                                    <a href="./gamepage-2.html"><img src="./assets/img/webq/portfolio2.webp"></a>
+                                    <span class="card-modified">
+                                        <ul class="list-unstyled">
+                                            <li class="subheading">Group Work by Kaimin Liu & Xueyan Zhang</li> 
+                                            <br>
+                                            <li>VR Puzzle is a game demo on Oculus Rift, players can walk in the Scene and grab items on table to figure out the way of passing the room. We did two room as well as puzzles in this demo.</li>
+                                        </ul>
+                                    </span>
                                 </div>
                                 <div class="carousel-item">
-                                    <a href="./gamepage-1.html"><img src="./assets/img/webq/portfolio1.webp">
-                                    <div class="carousel-caption">
-                                        <h3 class="font-special">Horror Maze</h3>
-                                        <p>by Kaimin Liu & Xueyan Zhang</p>
-                                        <p>PC: Windows</p>
-                                    </div>
-                                    </a>
+                                   <h3 class="font-special carousel-caption">Horror Maze</h3>
+                                   <a href="./gamepage-1.html"><img src="./assets/img/webq/portfolio1.webp"></a>
+                                    <span class="card-modified">
+                                        <ul class="list-unstyled"><li class="subheading">Group Work by Kaimin Liu & Xueyan Zhang</li>
+                                            <br>
+                                            <li>Horror Maze is a maze game on PC platform. I reused some art assets from the VR Puzzle game but render them in built-in render pipe instead of HDRP, because I was learning unity shaderlab during this project.</li>
+                                        </ul>
+                                    </span> 
                                 </div>
-                                <div class="carousel-item">
-                                    <a href="./gamepage-2.html"><img src="./assets/img/webq/portfolio2.webp">
-                                    <div class="carousel-caption">
-                                        <h3 class="font-special">VR Puzzle</h3>
-                                        <p>by Kaimin Liu & Xueyan Zhang</p>
-                                        <p>VR: Occulus Rift</p>
-                                    </div>
-                                    </a>
-                                </div>
-                                
+                               
                             </div>
                          
+
                             <!-- 左右切换按钮 -->
                             <div>
-                                <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                                    <span class="carousel-control-prev-icon"></span>
+                                <a class="carousel-control-prev" style="bottom: 450px;"  href="#caro" data-slide="prev">
+                                    <span class="carousel-control-prev-icon ">&lsaquo;</span>
                                 </a>
-                                <a class="carousel-control-next" href="#demo" data-slide="next">
-                                    <span class="carousel-control-next-icon"></span>
+                                <a class="carousel-control-next" style="bottom: 450px;" href="#caro" data-slide="next">
+                                    <span class="carousel-control-next-icon ">&lsaquo;</span>
                                 </a>
                             </div>
-                        </div>  
-                       
-                    </div>
-               
-                    <div class="">
-                        <h3 class="mb-5"></h3>
-                        <h3 >Other Micro Game Design Works</h3>
-                    </div>
+                        </div>
+                        
+                </div>   
+            </section>
+            <hr class="m-0" />
+            <!-- Micro games -->
+            <section class="resume-section" id="portfolios-2">
+                <div class="resume-section-content-special" >
+                    <h2 class="mb-5">Micro Game Design</h2>
                
                     <div id="portfolio" class="">
                         <div class="container-fluid p-0">
@@ -144,9 +165,8 @@
                 </div>   
             </section>
             <hr class="m-0" />
-           
             <!-- education & experience-->
-            <section class="resume-section" id="edu&exp">
+            <section class="resume-section" id="aboutme">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Experience</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
@@ -155,7 +175,7 @@
                             <div class="subheading mb-3">NERDlab (Miami)</div>
                             <p>- Create 3D Models for Enviroments and Characters and 2D Arts</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">September 2019 - Present</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">2019 / 09 - 2021 / 05</span></div>
                     </div>
                    
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
@@ -163,10 +183,8 @@
                             <h3 class="mb-0">3D Character Designer</h3>
                             <div class="subheading mb-3">Qifun Network Co. Ltd. (Beijing)</div>
                             <p>- Create 3D models</p>
-                            <p>- Had more particular knowledge of manga-style mobile game</p>
-                            <p>- Better anti-pressure ability</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">May 2017 - November 2017</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">2017 / 05 - 2017 / 11 </span></div>
                     </div>
 
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
@@ -176,7 +194,7 @@
                             <p>- Create 3D Character Models</p>
                             <p>- Had access to games in different art styles such as Next Generation Game Arts</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">December 2014 - March 2017</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">2014 / 12 - 2017 / 03</span></div>
                     </div>
                     <h2 class="mb-5"></h2>
 
@@ -187,7 +205,7 @@
                             <div class="subheading mb-3">Master of Fine Arts</div>
                             <div>Major: Interactive Media (Track: Game Design)</div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2019 - Present</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">2019 / 08 - 2021 / 05</span></div>
                     </div>
 
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
@@ -196,15 +214,9 @@
                             <div class="subheading mb-3">Bachelor of Fine Arts</div>
                             <div>Major: Ceramic Art and Engineering</div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">September 2010 - June 2014</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">2010 / 09 -  2014 / 06</span></div>
                     </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-           
-            <!-- Skills-->
-            <section class="resume-section" id="aboutme">
-                <div class="resume-section-content">
+
                     <h2 class="mb-5">About Me</h2>
                     <h3 class="mb-5">Skills</h3>
                     <div class="subheading mb-3">Programming Languages & Tools</div>
@@ -220,16 +232,10 @@
                         <li>
                     </ul>
                     <br>
-                    <h3 class="mt-5 mb-5">Contact Me</h3>
+                    <h3 class="mt-5 mb-5">Contact Me:</h3>
                     <div class="subheading mb-5">
                         <a href="mailto:zxy0025@live.com"> zxy0025@live.com</a>
                     </div>
-                    <!-- <div class="social-icons">
-                        <a class="social-icon" href="https://www.linkedin.com/in/Xueyan-Zhang-tech-artist/"><i class="fab fa-linkedin-in"></i></a>
-
-                    </div> -->
-                    <br>
-                    <p class="lead mb-5"></p>
                 </div>
             </section>
             <hr class="m-0" />
