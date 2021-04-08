@@ -246,7 +246,7 @@
                     <p><b>Problems found in Testing Terrain</b></p>
                     <ol><li>The materials of trees or any other gameobjects with latest HDRP lit shader are incorrect in transparent order.</li>
                         <li>The Terrain in HDRP doesn't support detail shaders, I can't create grasses without huge waste of performance. 
-                                <ul>I found 2 different solutions to try.
+                                <ul>I found 2 different solutions to try:
                                     <li>a groups of polygons, require polygons faced to different angles, at least 3 faces for each smallest group.</li>
                                     <li>a single face for each piece of grass but works with Billboard Shader (Polygons with this shader are always facing to the camera.) </li>
                                 </ul>
