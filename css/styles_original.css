@@ -510,6 +510,13 @@ mark,
   height: auto;
 }
 
+.img-fluid-80{
+  width: 90%;
+  height: auto;
+  left: 5%;
+  top: 5%;
+}
+
 .figure {
   display: inline-block;
 }
@@ -4532,7 +4539,24 @@ input[type=button].btn-block {
     width: 100%;
   }
 }
-
+.card-modified{
+  position: relative;
+  display: flex;
+  height: 200px;
+  width: auto;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  padding-top: 2rem;
+}
+.card-horizontal{
+  position: relative;
+  display: flex; 
+  width: 200px;
+  height: auto;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  padding-top: 2rem;
+}
 .accordion {
   overflow-anchor: none;
 }
@@ -5998,18 +6022,23 @@ a.close.disabled {
 }
 
 .carousel-indicators li {
-  box-sizing: content-box;
+  box-sizing: border-box;
   flex: 0 1 auto;
-  width: 30px;
-  height: 3px;
-  margin-right: 3px;
-  margin-left: 3px;
+  width: 10px;
+  height: 10px;
+  /* padding: -10px; */
+  margin-top: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
   text-indent: -999px;
   cursor: pointer;
   background-color: #fff;
+  border-radius: 10px;
   background-clip: padding-box;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
+  /* border-top: -5px solid transparent;
+  border-left: -5px  solid transparent;
+  border-right: -5px  solid transparent ;
+  border-bottom: -5px solid transparent; */
   opacity: 0.5;
   transition: opacity 0.6s ease;
 }
@@ -10184,6 +10213,7 @@ p.lead {
   border-radius: 100%;
   font-size: 1.5rem;
   margin-right: 1.5rem;
+  text-align: center;
 }
 .social-icons .social-icon:last-child {
   margin-right: 0;
@@ -10208,10 +10238,11 @@ p.lead {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   height: 100%;
   position: absolute;
-  bottom: 0;
+  top: 0;
+
   text-align: center;
   opacity: 0;
   color: #fff;
@@ -10226,7 +10257,7 @@ p.lead {
   text-transform: uppercase;
 }
 #portfolio .container-fluid .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-sm .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-md .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-lg .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-xl .portfolio-box .portfolio-box-caption .project-name {
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption, #portfolio .container-sm .portfolio-box:hover .portfolio-box-caption, #portfolio .container-md .portfolio-box:hover .portfolio-box-caption, #portfolio .container-lg .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
