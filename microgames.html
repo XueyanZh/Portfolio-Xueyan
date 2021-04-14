@@ -102,7 +102,7 @@
            var targetID =document.getElementById("microGameList");
            var targetItems =targetID.getElementsByClassName("list-group-item"); 
            for(var i=0;i<targetItems.length;i++){
-                if(i==(parseInt(localStorage.something)-1)){
+                if(i==(parseInt(localStorage.microGame)-1)){
                     targetItems[i].className+=" active";
                     document.getElementById("MicroGame"+(i+1).toString()).className+=" active";
                 }
