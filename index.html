@@ -6,10 +6,11 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Resume - Xueyan Zhang</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        
+        <!-- <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" /> -->
        
         <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script>
+        <!-- <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script> -->
         <!-- <script src="./js/all.js"></script> -->
         <!-- Google fonts-->
 
@@ -178,16 +179,22 @@
                 </div>   
             </section>
             <hr class="m-0" />
-            <!-- Micro games -->
+            <!-- Micro games --> 
+         
             <section class="resume-section" style="max-width: 100rem;" id="portfolios-3">
-                <div class="resume-section-content-special" >
+            
+
+                <div class="resume-section-content-special" >   
+                   
                     <h2 class="mb-5">Micro Game Design</h2>
                     <p>These are some demos of micro games designed and developed by myself and I built them on web platform for you to try. Shopping simulator and AI forecaster are news games, and The Relics is a platform game, it was designed on PC platform originally and then I moved it to web platform.</p>
+                 
                     <div id="portfolio" class="">
                         <div class="container-fluid p-0">
-                            <div class="row no-gutters clear-padding">
+                            <div class="row no-gutters clear-padding" id="mgsIndex">
+                             
                                 <div class="col-lg-4 col-sm-6 clear-padding">
-                                    <a class="portfolio-box" href="./microgames1.html" >
+                                    <a class="portfolio-box microGm to1"  href="./microgames1.html#MicroGame1" >
                                         <img class="img-fluid-80" style="border-radius: 30px;" src="assets/img/webq/game1.webp" alt="" />
                                         <div class="portfolio-box-caption"  style="border-radius: 30px;" >
                                             <div class="text-display grid-text project-name" >Shopping Simulator</div>
@@ -195,7 +202,7 @@
                                     </a>
                                 </div>
                                 <div class="col-lg-4 col-sm-6">
-                                    <a class="portfolio-box" href="./microgames2.html" >
+                                    <a  class="portfolio-box microGm to2"  href="./microgames1.html#MicroGame2" >
                                         <img class="img-fluid-80" style="border-radius: 30px;" src="assets/img/webq/game2.webp" alt="" />
                                         <div class="portfolio-box-caption" style="border-radius: 30px;" >
                                             <div class="text-display grid-text project-name">The Relics</div>
@@ -203,7 +210,7 @@
                                     </a>
                                 </div>
                                 <div class="col-lg-4 col-sm-6">
-                                    <a class="portfolio-box" href="./microgames3.html" >
+                                    <a  class="portfolio-box microGm to3"  href="./microgames1.html#MicroGame3"  >
                                         <img class="img-fluid-80" style="border-radius: 30px;" src="assets/img/webq/game3.webp" alt="" />
                                         <div class="portfolio-box-caption" style="border-radius: 30px;" >
                                             <div class="text-display grid-text project-name">AI Forecaster</div>
@@ -300,6 +307,25 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script>
+            var getTags = document.getElementById("mgsIndex");
+            var getIndex = getTags.getElementsByClassName("microGm");
+            var target="";
+
+            // var targetID =document.getElementById("microGameList");
+            // var targetItems =targetID.getElementsByClassName("list-group-item");
+
+            for(var i=0;i<getIndex.length;i++){
+                getIndex[i].addEventListener("click",function(){
+                    target=this.className[this.className.length-1];
+                    localStorage.something=target;
+                    console.log("target"+target);
+                }); 
+                console.log(i);
+            }
+            
+            // console.log(targetItems[parseInt(target)].className);
+        </script>
     </body>
     <footer>
             <span class="card-footer"> <b>Contact Me: &nbsp;</b>  <a href="mailto:zxy0025@live.com"> zxy0025@live.com</a></span>

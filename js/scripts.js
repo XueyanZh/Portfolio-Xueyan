@@ -35,11 +35,19 @@
             $(".navbar-collapse").collapse("hide");
         });
 
-        // $('.carousel').carousel({interval:false});
-        
+     
+
 
     // Activate scrollspy to add active class to navbar items on scroll
     $("body").scrollspy({
         target: "#sideNav",
     });
+  
+
+    // $('.microGms2').on('click', function (evt) {
+     
+    //     $('.mg2').triggerHandler('click');
+    //     evt.preventDefault();
+    //   });
+
     })(jQuery); // End of use strict
