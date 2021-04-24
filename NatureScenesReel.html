@@ -67,44 +67,52 @@
       </div>
     </div>
     </section>
-
+    <section id="detail" class="resume-section">
     <h1 class="font-weight-normal text-center m-3">Workflow</h1>
 
-    <div id="detail" class="position-relative overflow-hidden ml-3 mr-3">
+    <div  class="position-relative overflow-hidden ml-3 mr-3">
       
-      <p class="lead text-center">...</p>
+      <p class="lead text-center">The workflow goes from 3D models to 2D textures and then to the Shader. </p> 
+     
       <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
         <div class="bg-light me-md-3 pt-3 px-3 mr-3 pt-md-5 px-md-5 text-center position-relative overflow-hidden" style="height: 500px">
           <div >
-            <h2 class="display-5">3D Generators</h2>
+            <h2 class="">3D Generators</h2>
             <p class="lead">Tree Generator/Shrub Generator/Rock Generator</p>
           </div>
-          <div class="mx-auto position-absolute" style="height: 60%;width: 80%;  border-radius: 21px 21px 0 0;left:10%; bottom: 0;"><img class="position-absolute" style="bottom: 0; left:0; width: 100%; height: auto; border-radius: 21px 21px 0 0;" src="./assets/img/webq/3d-generator.webp" alt=""></div>
+          <div class="mx-auto position-absolute" style="height: 60%;width: 80%;  border-radius: 21px 21px 0 0;left:10%; bottom: 0;">
+            <a href="#3d"><img class="position-absolute" style="bottom: 0; left:0; width: 100%; height: auto; border-radius: 21px 21px 0 0;" src="./assets/img/webq/3d-generator.webp" alt=""></a></div>
         </div>
         <div class="bg-light me-md-3 pt-3 px-3 mr-3 pt-md-5 px-md-5 text-center position-relative overflow-hidden " style="height: 500px;">
           <div >
-            <h2 class="display-5">2D Generators</h2>
+            <h2 class="">2D Generators</h2>
             <p class="lead">Tree Texture Generator/Rock Texture Generator</p>
           </div>
-          <div class="mx-auto position-absolute" style="height: 60%;width: 80%;  border-radius: 21px 21px 0 0;left:10%;bottom: 0;"><img class="position-absolute" style="bottom: 0; left:0; width: 100%; height: auto; border-radius: 21px 21px 0 0;" src="./assets/img/webq/2d-generator.webp" alt=""></div>
+          <div class="mx-auto position-absolute" style="height: 60%;width: 80%;  border-radius: 21px 21px 0 0;left:10%;bottom: 0;">
+            <a href="#2d"><img class="position-absolute" style="bottom: 0; left:0; width: 100%; height: auto; border-radius: 21px 21px 0 0;" src="./assets/img/webq/2d-generator.webp" alt=""></a></div>
         </div>
         <div class="bg-light me-md-3 pt-3 px-3  pt-md-5 px-md-5 text-center position-relative overflow-hidden" style="height: 500px;">
           <div >
-            <h2 class="display-5">Shaders</h2>
+            <h2 class="">Shaders</h2>
             <p class="lead">Wind Shader for Grasses and Trees</p>
           </div>
-          <div class="mx-auto position-absolute" style="height: 60%;width: 80%;  border-radius: 21px 21px 0 0;left:10%;bottom: 0;"><img class="position-absolute" style="bottom: 0; left:0; width: 100%; height: auto; border-radius: 21px 21px 0 0;" src="./assets/img/webq/shader-graph.webp" alt=""></div>
+          <div class="mx-auto position-absolute" style="height: 60%;width: 80%;  border-radius: 21px 21px 0 0;left:10%;bottom: 0;">
+            <a href="#shader"><img class="position-absolute" style="bottom: 0; left:0; width: 100%; height: auto; border-radius: 21px 21px 0 0;" src="./assets/img/webq/shader-graph.webp" alt=""></a></div>
         </div>
       </div>
     </div>
-
+    </section>
+    <section id="3d" class="resume-section">
     <h2 class="font-weight-normal text-center" >3D Generators</h2>
-    <div id="3d" class="position-relative overflow-hidden m-3">
+    <div style="width: 50%; margin: auto;">
+    <p class="lead text-center">The Tree and shrub Generators can work in Unity, while the rock generator can only work in Houdini, because the high polygon generation and rendering will consume most of the performance in Unity.</p>
+    </div> 
+    <div class="position-relative overflow-hidden m-3">
       <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
         
         <div class="bg-light mr-3" style="height: 650px;">
-          <h4 class="lead text-center m-3">Tree Generator/Shrub Generator</h4>
-          <p class="lead text-center">...</p>
+          <h4 class=" text-center m-3">Tree Generator/Shrub Generator</h4>
+          <p class="lead text-center">This generator can create trees started from the thrunk, and you can modify details of each layer of branches. And for Beginners, there is a random seed to generate trees automatically.</p>
           <div class="position-relative overflow-hidden bg-light d-md-flex" >
             <div class="imgInline">
               <img src="./assets/img/webq/tree_growth.webp" alt="">
@@ -113,8 +121,8 @@
         </div>
 
         <div class="bg-light"  style="height: 650px;">
-          <h4 class="lead text-center m-3">Rock Generator</h4>
-          <p class="lead text-center">...</p>
+          <h4 class=" text-center m-3">Rock Generator</h4>
+          <p class="lead text-center">The rock generator can create stones started from a basic shape, such as a cube, and you can also started from any shape in FBX file.</p>
           <div class="position-relative overflow-hidden bg-light d-md-flex" >
             <div class="imgInline">
               <img src="./assets/img/webq/rock_changing.webp" alt="">
@@ -124,59 +132,119 @@
       
       </div>
     </div>
+    </section>
 
-    <h2 class="font-weight-normal text-center m-3" >2D Generators</h2>
+    <section id="2d" class="resume-section">
+    <h2  class="font-weight-normal text-center m-3" >2D Generators</h2>
+    <div style="width: 50%; margin: auto;">
     <p class="lead text-center">All of Texture Generators are designed both for beginners and experts.</p>
-    <div id="2d" class="position-relative overflow-hidden m-3 ">
+    <p class="lead text-center">Texture generators are working in Substance Designer, For Rocks, it rely more on baked normal maps, so it will be totally procedurally generated. But for plants, it relies less on baked normal maps, I used some leaf textures from <a href="https://www.textures.com/library">texture.com</a>.</p>
+    </div>
+    <div class="position-relative overflow-hidden m-3 ">
       <div class="d-md-flex flex-md-equal w-100  my-md-3 ps-md-3">
-            <div class="bg-light mr-3 text-center position-relative overflow-hidden" style="height: 700px">
+            <div class="bg-light mr-3 text-center position-relative overflow-hidden" style="height: 600px">
               <div>
-                <h4 class="lead text-center">Tree & Shrub Textures Generator</h4>
+                <h4 class="lead text-center m-3">Tree & Shrub Textures Generator</h4>
                 <p class="lead">...</p>
               </div>
               <div class="d-md-flex flex-md-equal w-100 ">
-                <div class="bg-light text-center position-relative overflow-hidden" style="height: 500px">
+                <div class="bg-light text-center position-relative overflow-hidden" style="height: 550px">
                   <div >
                     <p class="lead">Tree Texture Generator for Beginners:</p>
                   </div>
-                  <img class="position-absolute p-3" style="bottom: 0; left:0;  width: 100%; height: auto; border-radius:30px;" src="./assets/img/treeTexBg.png" alt="">
+                  <img class="position-absolute p-3" style="bottom: 10%; left:0;  width: 100%; height: auto; border-radius:30px;" src="./assets/img/treeTexBg.png" alt="">
                 </div>
                 
-                <div class="bg-light  text-center position-relative overflow-hidden" style="height: 500px;">
+                <div class="bg-light  text-center position-relative overflow-hidden" style="height: 550px;">
                   <div >
                     <p class="lead">Tree Texture Generator for Experts:</p>
                   </div>
-                  <img class="position-absolute p-3" style="bottom: 0; left:0;  width: 100%; height: auto;border-radius:30px;" src="./assets/img/treeTexExp.png" alt="">
+                  <img class="position-absolute p-3" style="bottom: 10%; left:0;  width: 100%; height: auto;border-radius:30px;" src="./assets/img/treeTexExp.png" alt="">
                 </div>
               </div>
             </div>
             
-            <div class="bg-light text-center position-relative overflow-hidden" style="height: 700px;">
+            <div class="bg-light text-center position-relative overflow-hidden" style="height: 600px;">
               <div>
-                <h4 class="lead text-center">Rock Textures Generator</h4>
+                <h4 class="lead text-center m-3">Rock Textures Generator</h4>
                 <p class="lead">...</p>
               </div>
               <div class="d-md-flex flex-md-equal w-100 ">
-                <div class="bg-light text-center position-relative overflow-hidden" style="height: 500px">
+                <div class="bg-light text-center position-relative overflow-hidden" style="height: 550px">
                   <div >
                     <p class="lead">Rock Texture Generator for Beginners:</p>
                   </div>
-                  <img class="position-absolute p-3" style="bottom: 0; left:0;  width: 100%; height: auto; border-radius:30px;" src="./assets/img/rockBg.png" alt="">
+                  <img class="position-absolute p-3" style="bottom: 10%; left:0;  width: 100%; height: auto; border-radius:30px;" src="./assets/img/rockBg.png" alt="">
                 </div>
                 
-                <div class="bg-light  text-center position-relative overflow-hidden" style="height: 500px;">
+                <div class="bg-light  text-center position-relative overflow-hidden" style="height: 550px;">
                   <div >
                     <p class="lead">Rock Texture Generator for Experts:</p>
                   </div>
-                  <img class="position-absolute p-3" style="bottom: 0; left:0;  width: 100%; height: auto;border-radius:30px;" src="./assets/img/rockExp.png" alt="">
+                  <img class="position-absolute p-3" style="bottom: 10%; left:0;  width: 100%; height: auto;border-radius:30px;" src="./assets/img/rockExp.png" alt="">
                 </div>
               </div>
             </div>
           </div>
 
     </div>
+    </section>
+    <section id="shader" class="resume-section">
+    <h2  class="font-weight-normal text-center m-3" >Shader</h2>
+    <div style="width: 50%; margin: auto;">
+       <p class="lead text-center">Shaders for grasses and trees.</p>
+       <p class="lead text-center">I select billboard shader to reduce polygons, because in this shader, the surface will be always rendered face to camera, which means less polygons required for each grasses.</p>
+       <p class="lead text-center">Both of the tree and grass can be pushed by wind.</p>
+       <p class="lead text-center">There is a script to control the season changing.</p>
+      </div>
     
+    <div class="position-relative overflow-hidden m-3 ">
+      <div class="d-md-flex flex-md-equal w-100  my-md-3 ps-md-3">
+            <div class="bg-light mr-3 text-center position-relative overflow-hidden" style="height: 520px">
+              <div>
+                <h4 class="lead text-center m-3">About Grasses</h4>
+              </div>
+              <div class="d-md-flex flex-md-equal w-100 ">
+                <div class="bg-light text-center position-relative overflow-hidden" style="height: 420px">
+                  <div >
+                    <p class="lead">Billboard shader:</p>
+                  </div>
+                  <img class="position-absolute p-3" style="bottom: 10%; left:10%;  width: 80%; height: auto; border-radius:30px;" src="./assets/img/webq/billboard.webp" alt="">
+                </div>
+                
+                <div class="bg-light  text-center position-relative overflow-hidden" style="height: 420px;">
+                  <div >
+                    <p class="lead">Wind:</p>
+                  </div>
+                  <img class="position-absolute p-3" style="bottom: 10%; left:10%;  width: 80%; height: auto; border-radius:30px;" src="./assets/img/webq/wind.webp" alt="">
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-light text-center position-relative overflow-hidden" style="height: 520px;">
+              <div>
+                <h4 class="lead text-center m-3">About Trees</h4>
+              </div>
+              <div class="d-md-flex flex-md-equal w-100 ">
+                <div class="bg-light text-center position-relative overflow-hidden" style="height: 420px">
+                  <div >
+                    <p class="lead">Wind for trees and shrubs:</p>
+                  </div>
+                  <img class="position-absolute p-3" style="bottom: 10%; left:10%;  width: 80%; height: auto; border-radius:30px;" src="./assets/img/webq/windtree.webp" alt="">
+                </div>
+                
+                <div class="bg-light  text-center position-relative overflow-hidden" style="height: 420px;">
+                  <div >
+                    <p class="lead">Season Changing:</p>
+                  </div>
+                  <img class="position-absolute p-3" style="bottom: 10%; left:10%;  width: 80%; height: auto;border-radius:30px;" src="./assets/img/webq/season.webp" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
 
+    </div>
+    </section>
 
     <footer class="ml-3">
       <div> 
