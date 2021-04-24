@@ -39,7 +39,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="./index.html">
                 <span class="d-block d-lg-none ml-3"><h2 class="text-h2">Xueyan Zhang</h2></span>
-                <span class="d-none d-lg-block"><h2 style="color: white;"> XUEYAN <br> ZHANG</h2></span>
+                <span class="d-none d-lg-block"><h2 class="main-color"> XUEYAN </h2><h2  style="color: white;"> ZHANG</h2></span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -70,7 +70,7 @@
                 <a class="list-group-item list-group-item-action" data-toggle="list" href="#week7" role="tab">Week7: Tree and Shrub Generators work in Unity</a>
                 <a class="list-group-item list-group-item-action" data-toggle="list" href="#week8" role="tab">Week8: HDRP transparent order Problems </a>
                 <a class="list-group-item list-group-item-action" data-toggle="list" href="#week9" role="tab">Week9: Grasses Render - Billboard Shader</a>
-             
+                <a class="list-group-item list-group-item-action" data-toggle="list" href="#week10" role="tab">Week10: Wind Shader for tree leaves</a>
             </div>
             <section  class="resume-section">
                 <!--  -->    
@@ -267,20 +267,20 @@
                         <ul><li>Material for trees: require depth write and turn on the Alpha Clipping, or turn on the transparent depth prepass to add a pass with depth write before current pass. 
                             <div class="row list-group-horizontal mt-2 mb-2 ml-5">
                                 <ul class="list-unstyled mr-5"><li>Before: wrong transparent order</li>
-                                <li><img width="350" src="./assets/img/webq/wrongTransparent.webp" alt="before" title="before"></li>
+                                <li><img width="350" class="border-r" src="./assets/img/webq/wrongTransparent.webp" alt="before" title="before"></li>
                                 </ul>
                                 <ul class="list-unstyled"><li>After: good transparent order</li>
-                                <li> <img width="350"  src="./assets/img/webq/goodTransparent.webp" alt="after" title="after"></li>
+                                <li> <img width="350" class="border-r" src="./assets/img/webq/goodTransparent.webp" alt="after" title="after"></li>
                                 </ul>
                             </div>
                         </li>
                         <li>Material for grasses: while using lit shader, faces without thickness will create shadows with a lot of errors.
                             <div class="row list-group-horizontal mt-2 mb-2 ml-5">
                                 <ul class="list-unstyled mr-5"><li>Lit shader</li>
-                                <li><img width="350"  src="./assets/img/webq/grass2.webp" alt="before" title="before"></li>
+                                <li><img width="350" class="border-r" src="./assets/img/webq/grass2.webp" alt="before" title="before"></li>
                                 </ul>
                                 <ul class="list-unstyled"><li>Unlit shader</li>
-                                <li> <img width="350" src="./assets/img/webq/grass1.webp" alt="after" title="after"></li>
+                                <li> <img width="350" class="border-r" src="./assets/img/webq/grass1.webp" alt="after" title="after"></li>
                                 </ul>
                             </div>
                         </li>
@@ -291,7 +291,7 @@
                             <ul><li>3 faces for each group: When place 50000 grasses on a 500x500 sized terrain, only 1.2 Fps</li>
                                 <li>More than 300 faces for a bigger group: By this way, the total group amount could be reduced. When place them on 500x500 sized terrain, it runs at 51 Fps.
                                 <br>However, as a bigger group, it can't grow along the slopes, and always keep vertical, which causes a lot of errors.
-                                <br><img src="./assets/img/webq/grasses.webp" alt="">
+                                <br><img class="border-r" src="./assets/img/webq/grasses.webp" alt="">
                                 </li>
                                 
                             </ul>
@@ -308,7 +308,7 @@
                         <ul><li>Billboard shader</li>
                                 <ol><li>Get the x axis that is perpendicular to both the camera and the upward direction in world coordinates.</li>
                                     <li>Do the same calculation again to get the upward direction in camera's coordinates.</li>
-                                    <img width="50%" class="img-border" src="./assets/rotationCoord.png" alt="">
+                                    <img width="50%" class="img-border" src="./assets/img/webq/rotationcoord.webp" alt="">
                                     <li>Construct a matrix of camera direction, upward direction in camera's coordinates, and the x axis.</li>
                                     <li>By multiply with this matrix, gameobjects will rotate to face the camera.</li>
                                 </ol>
@@ -319,6 +319,29 @@
                                     <li>To avoid moving the root of grasses, blend the original vertex position to the moving vertex position with an alpha of V value.</li>
                                     <li>Transform from world coordinates to object coordinates, and multiply it with the outcome of billboard shader's vertex position.</li>
                                 </ol>
+                        </ul>
+                    </div>
+                    <div class="tab-pane " id="week10" role="tabpanel">
+                        <h3 class="mb-0" >Week10: Grasses Render - Billboard Shader</h3>
+                        <div class="subheading mb-3">2021/4/16</div>
+                        <p><b>Updates:</b></p>
+                        <ul><li>Wind Shader For Trees</li>
+                            <ul>When I finish wind shader for grasses, I found the tree leaves need a wind shader too, unless they will look uncompatible.
+                                Leaves and trunk will be pushed by wind both. I separate them to 2 parts in shader:
+                                <li> leaves: I use SmoothStep calculation 2 times to control U and V separately as a mask of leaves to make sure that only leaves will be pushed, but by this way, it's better not to change the tree's UV set. Or at least, let the leaves UV always stay at the top right corner of UV map. 
+                                </li> 
+                                <li> trunk and branches: Because I reused most uv of branches, my grasses shader will make a lot of errors when pushing the trunk and branches. 
+                                    I found another way to deal with this, I split the vertex position in object space, and get the X and Z values, value changes on X and Z axis will simulate a pushing force.
+                                    <div class="row list-group-horizontal mt-2 mb-2 ml-5">
+                                          <ul class="list-unstyled mr-5"><li>Before: offset based on uv</li>
+                                        <li><img width="250" class="border-r" src="./assets/img/webq/windbefore.webp" alt="before" title="before"></li>
+                                        </ul>
+                                        <ul class="list-unstyled"><li>After: offset based on vertex position</li>
+                                        <li> <img width="250" class="border-r"  src="./assets/img/webq/windafter.webp" alt="after" title="after"></li>
+                                    </ul>
+                                    </div>
+                                </li>
+                            </ul>
                         </ul>
                     </div>
                 </div>
