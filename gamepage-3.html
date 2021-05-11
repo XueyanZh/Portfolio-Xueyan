@@ -71,6 +71,8 @@
                 <a class="list-group-item list-group-item-action" data-toggle="list" href="#week8" role="tab">Week8: HDRP transparent order Problems </a>
                 <a class="list-group-item list-group-item-action" data-toggle="list" href="#week9" role="tab">Week9: Grasses Render - Billboard Shader</a>
                 <a class="list-group-item list-group-item-action" data-toggle="list" href="#week10" role="tab">Week10: Wind Shader for tree leaves</a>
+                <a class="list-group-item list-group-item-action" data-toggle="list" href="#week11" role="tab">Week11: Season Changing</a>
+                <a class="list-group-item list-group-item-action" data-toggle="list" href="#week12" role="tab">Week12: Lighting Presets</a>
             </div>
             <section  class="resume-section">
                 <!--  -->    
@@ -344,16 +346,33 @@
                             </ul>
                         </ul>
                     </div>
+                    <div class="tab-pane " id="week11" role="tabpanel">
+                        <h3 class="mb-0" >Week11: Season Changing</h3>
+                        <div class="subheading mb-3">2021/4/23</div>
+                        <p><b>Updates:</b></p>
+                        <p>Create some assets with my generators, and create a new terrain in Unity to test season changing feature.</p>
+                        <p>A template script to show users how to control season changing during runtime.</p>
+                        <p><b>Problems I met:</b></p>
+                        <ul><li>How to achieve the effect of bare trees?</li>
+                            <li>How to control color changing smoothly?</li>
+                        </ul>
+                        <p><b>Solutions:</b></p>
+                        <p>To achieve the season changing feature by script, the script allows to add materials dynamically, while the script will changing the main color of each shader. I set the main color of all my shaders as "_color".</p>
+                        <p>To show my season changing features for users, I add an input control of the space. Users can hold the space to see how season chaning during runtime.</p>
+                        <p>To control color changine smoothly, I choose the function "Color.Lerp(Color a,Color b,float t)", and set up 4 colors for different season. Such as greenyellow, green, orange, and vermillion.</p>
+                        <p>To achieve the bare trees, I modified my shaders with a new exposed channel (the alpha channel) of main color to control the clip range. For this channel, 1 means no extra clips for leaves, and 0 means clip the whole leaves.</p>
+                        <img src="./assets/img/webq/seasonChanging.webp" alt="">
+                    </div>
+                    <div class="tab-pane " id="week12" role="tabpanel">
+                        <h3 class="mb-0" >Week12: Lighting Presets</h3>
+                        <div class="subheading mb-3">2021/4/30</div>
+                        <p><b>Updates:</b></p>
+                            <p>Better the terrain textures and put all of them in my final package, I add these textures just for better render outcomes. </p>
+                            <p>I preset 3 sets of lighting envriornments for users, the daytime, the sunset, and the night. To let users can get the same game scene as I rendered, I built prefabs for each lights and volume files, and put every assets needed into the final package.</p>
+                            <p>Make records of each stage when using tools for users as a reference.</p>
+                    </div>
                 </div>
 
-                <div>
-                   
-                   
-                   
-
-                    
-                    
-                </div>
             </section> 
             
             <hr class="m-0" />
