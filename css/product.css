@@ -94,7 +94,27 @@ section.resume-section {
   /* margin: 0.5rem; */
 }
 .imgInline video{
-  width: 80%;
-  margin: 10%;
-  border-radius: 10px;
+  /* width: 80%;
+  margin: 10%; */
+  width: 1200px;
+  border-radius: 20px;
+}
+.w-gallery{
+  width: 1200px;
+}
+.w-gallery img{
+  border-radius: 20px;
+}
+.display-5 {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.w-m{
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.v-m{
+  padding-top: 2rem;
+  padding-bottom: 3rem;
 }
